@@ -47,7 +47,7 @@ namespace Banking_Practice
                 ToAccount.Deposit(amount);
                 return true;
             }
-            else return false;
+            return false;
         }
         
         public void Print()
