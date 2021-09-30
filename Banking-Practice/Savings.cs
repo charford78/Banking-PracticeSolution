@@ -12,7 +12,9 @@ namespace Banking_Practice
 
         public decimal CalculateAndPayInterest(int months)
         {
-            var interest = Balance *
+            var interest = Balance * (InterestRate / 12) * months;
+            Deposit(interest);
+            return interest;
         }
     }
 }

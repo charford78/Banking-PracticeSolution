@@ -12,7 +12,7 @@ namespace Banking_Practice
         public decimal Balance { get; set; } = 0;
         public string Description { get; set; }
 
-        public bool Deposit(int amount)
+        public bool Deposit(decimal amount)
         {
             if (amount <= 0)
             {
@@ -23,7 +23,7 @@ namespace Banking_Practice
             return true;
         }
 
-        public bool Withdraw(int amount)
+        public bool Withdraw(decimal amount)
         {
             if (amount <= 0)
             {
@@ -39,7 +39,7 @@ namespace Banking_Practice
             return true;
         }
 
-        public bool Transfer(int amount, Account ToAccount)
+        public bool Transfer(decimal amount, Account ToAccount)
         {
             var success = this.Withdraw(amount);
             if (success == true)
